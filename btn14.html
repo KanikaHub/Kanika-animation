@@ -1,0 +1,77 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+    <style> 
+          *{ 
+            box-sizing: border-box; 
+        } 
+        body{ 
+            height: 100vh; 
+            overflow: hidden; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            margin: 0; 
+            padding: 0; 
+        } 
+        a{ 
+            border: 2px solid red; 
+            padding: 20px; 
+            font-size: 35px; 
+            text-decoration: none; 
+            position: relative; 
+            /* overflow: hidden;  */ 
+        } 
+        a::before{ 
+            content: 'BEFORE'; 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            height: 100%; 
+            width: 100%; 
+            background-color: aqua; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+        
+            transition: all 0.5s; 
+            transform: rotateX(270deg); 
+            transform-origin: top; 
+             
+        } 
+        a:hover:before{ 
+            transform: rotateX(0deg); 
+        } 
+ 
+        a::after{ 
+            content: 'AFTER'; 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            height: 100%; 
+            width: 100%; 
+            background-color: rgb(200, 98, 8); 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+         
+            transition: all 0.5s; 
+            transition-delay: 1.25s; 
+            transform: rotateX(270deg); 
+            transform-origin: top; 
+             
+        } 
+        a:hover:after{ 
+            transform: rotateX(0deg); 
+        } 
+ 
+    </style> 
+</head> 
+<body> 
+    <a href="#">SUBMIT !!</a> 
+</body> 
+</html>

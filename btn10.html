@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(43, 41, 41);
+        }
+        a{
+            font-size: 35px;
+            text-decoration: none;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            color: antiquewhite;
+            box-shadow: 0 0 80px 10px aquamarine;
+
+        }
+        a:hover{
+            background-color: rgb(198, 153, 95);
+            color: rgb(42, 40, 40);
+        }
+        a::before{
+            content: "";
+            background-color: aquamarine;
+            height:50% ;
+            width: 150%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform:rotate(0deg) translateY(90px);
+            transition: all 2s;
+        }
+
+        a:hover::before{
+            transform:rotate(25deg) translateY(-60px)
+        }
+    </style>
+</head>
+<body>
+    <a href="#">HOVER ME </a>
+</body>
+</html>

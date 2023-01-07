@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(53, 52, 52);
+        }
+        a{
+            padding: 20px;
+            font-size: 35px;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            color: antiquewhite;
+            border-radius: 20px;
+            box-shadow: 0 0 80px 10px;
+
+        }
+        a:before{
+            content: "Be Happy😃";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgb(225, 220, 119);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all  1s;
+            transform: scale(5);
+            opacity: 0;
+
+        }
+        a:hover::before{
+            transform: scale(1);
+            opacity: 1;
+color: rgb(54, 52, 52);
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <a href="#">HOVER ME</a>
+</body>
+</html>

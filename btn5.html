@@ -1,0 +1,77 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Document</title> 
+  <style> 
+    *{ 
+      box-sizing: border-box; 
+ 
+    } 
+    body{ 
+      margin: 0; 
+      padding: 0; 
+      height: 100vh; 
+      display: flex; 
+justify-content: center; 
+align-items: center; 
+overflow: hidden; 
+background-color: rgb(45, 44,44);
+    } 
+    a{ 
+      /* border: 2px solid red;  */
+      padding: 10px 10px; 
+      border-radius: 20px; 
+      font-size: 50px; 
+      text-decoration: none; 
+      position: relative; 
+      overflow: hidden; 
+      color: rgb(219, 157, 81);
+            box-shadow: 0 0 50px 10px ;
+
+       
+    } 
+   
+    a::before{ 
+      content: ""; 
+      background-color: yellow; 
+      height: 180%; 
+      width: 100%; 
+      position: absolute; 
+top: 0; 
+left: 0; 
+z-index: -1; 
+transform-origin: bottom left; 
+transform: rotate(-50deg) translateX(-20px) translateY(-90px); 
+transition: all 1s; 
+    } 
+a:hover:before{ 
+  transform: rotate(-50deg) translateX(-20px) translateY(10px); 
+} 
+ 
+    a::after{ 
+      content: ""; 
+      background-color: rgb(19, 232, 62); 
+      height: 180%; 
+      width: 100%; 
+      position: absolute; 
+top: 0%; 
+left: 0%; 
+z-index: -1; 
+transform-origin: bottom right; 
+transform: rotate(-50deg) translateX(200px) translateY(100px); 
+transition: all 1s; 
+    } 
+    a:hover:after{ 
+      transform: rotate(-50deg) translateX(200px) translateY(-10px); 
+} 
+  </style> 
+</head> 
+<body> 
+   
+<a href="#">CLICK ME!</a> 
+ 
+</body> 
+</html>
