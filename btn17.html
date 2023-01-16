@@ -1,0 +1,116 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+    <style> 
+        .one{ 
+            display: flex; 
+            background-color: rgb(57, 57, 56);
+            justify-content: space-evenly; 
+            padding: 50px; 
+        } 
+        .text-box{ 
+            width: 500px; 
+            text-align: center; 
+            justify-content: center;
+            padding: 90px; 
+            line-height: 50px; 
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+            color: blue; 
+            
+        } 
+        .text-box h1{ 
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            top:50px;
+            font-size: 30px;
+            background-image: linear-gradient(40deg,grey,red,aqua); 
+            -webkit-background-clip: text; 
+            color: transparent; 
+         
+        } 
+        .pics{ 
+          
+    height: 500px;
+    width: 500px;
+    position: relative;
+    top: 160px;
+  
+}
+        
+        .pics img{ 
+height: 250px; 
+width: 250px; 
+border-radius: 20px; 
+padding: 20px; 
+        } 
+        
+        #p-1{ 
+            position: absolute; 
+            transition: 2s; 
+        } 
+        #p-1:hover~#p-2, #p-1:hover~#p-3{ 
+            transform: scale(0.7); 
+            z-index: -1; 
+            transition: 2s; 
+        } 
+        #p-1:hover{ 
+           transform: scale(1.2); 
+           z-index: 1; 
+           box-shadow: 10px 10px 8px 5px rgb(243, 68, 68); 
+        } 
+        #p-2{ 
+            position: absolute; 
+            left: 180px; 
+            top: 80px; 
+            transition: 2s; 
+        } 
+        #p-2:hover{ 
+            transform: scale(1.2); 
+           z-index: 1; 
+           box-shadow: 10px 10px 8px 5px rgb(243, 68, 68); 
+        } 
+        #p-2:hover~#p-3,#p-1:has(~#p-2:hover){ 
+            transform: scale(0.7); 
+            z-index: -1; 
+            transition: 2s; 
+        } 
+        #p-3{ 
+            position: absolute; 
+            top: 200px; 
+            left: 80px; 
+            transition: 2s; 
+            
+        } 
+        #p-1:has(~#p-3:hover),#p-2:has(~#p-3:hover){ 
+            transform: scale(0.7); 
+            z-index: -1; 
+            transition: 2s; 
+        } 
+        #p-3:hover{ 
+            z-index: 1; 
+            box-shadow: 10px 10px 8px 5px rgb(243, 68, 68); 
+        } 
+    </style> 
+</head> 
+<body> 
+     
+<section class="one"> 
+    <div class="text-box"> 
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim eius voluptas et cupiditate laboriosam quidem optio quas reiciendis quibusdam nobis ex tempora, nostrum, odio voluptatem, dolorum quia sapiente illum dolores fugit consequuntur labore. Repellat voluptas maxime quibusdam inventore facilis. Beatae.</h1> 
+    </div> 
+    <div class="pics"> 
+        <!-- img#p-$*3 --> 
+        <img src="https://images.unsplash.com/photo-1665686377065-08ba896d16fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=700&q=60" alt="" id="p-1"> 
+        <img src="https://images.unsplash.com/photo-1671693303863-387894313414?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=700&q=60" alt="" id="p-2"> 
+        <img src="https://images.unsplash.com/photo-1671584643473-891afcd941d8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=700&q=60" alt="" id="p-3"> 
+    </div> 
+</section> 
+ 
+</body> 
+</html>
